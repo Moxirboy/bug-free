@@ -18,7 +18,7 @@ import (
 func Execute() {
 
 	srv := new(server.Server)
-	port := "3000"
+	port := "5005"
 	log.Print("started")
 	if err := srv.Run(port, http2.Router()); err != nil {
 		log.Fatalf("error occured")

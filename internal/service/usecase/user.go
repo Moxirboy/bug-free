@@ -6,10 +6,10 @@ import (
 )
 
 type User struct {
-	repo repo.Postgres_
+	repo repo.PostgresRepo
 }
 
-func NewCrud(repo repo.Postgres_) *User {
+func NewCrud(repo repo.PostgresRepo) *User {
 	return &User{repo: repo}
 }
 

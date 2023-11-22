@@ -28,6 +28,7 @@ services:
       - donotstart
   db:
     image: postgres:latest
+    container_name: postgres
     environment:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: app_db

@@ -3,17 +3,20 @@ package handler
 import (
 	"bug-free/internal/model"
 	"bug-free/internal/response"
-	"github.com/gin-gonic/gin"
+	"fmt"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func (h *Handler) createUser(ctx *gin.Context) {
-	var User model.User
-	if err := ctx.BindJSON(User); err != nil {
+	var user model.User
+	if err := ctx.ShouldBindJSON(&user); err != nil {
 		response.NewErrorResponse(ctx, http.StatusBadRequest, err.Error())
 		return
 	}
-	id, err := h.service.Create(User)
+	fmt.Print("here is it :"+user.Name)
+	id, err := h.service.Create(user)
 	if err != nil {
 		response.NewErrorResponse(ctx, http.StatusBadRequest, err.Error())
 		return
@@ -31,14 +34,18 @@ func (h *Handler) UpdateUser(ctx *gin.Context) {
 func (h *Handler) DeleteUser(ctx *gin.Context) {
 	h.service.Delete()
 }
+func (h *Handler) main(ctx *gin.Context) {
+	ctx.String(200, "Hello, World!")
+}
 func (h *Handler) InitRouter() *gin.Engine {
 	router := gin.New()
 	crud := router.Group("/")
 	{
-		crud.POST("/Create", h.createUser)
-		crud.POST("/Read", h.GetUser)
-		crud.POST("/Update", h.UpdateUser)
-		crud.POST("/Delete", h.DeleteUser)
+		crud.GET("/" , h.main)
+		crud.POST("/create", h.createUser)
+		crud.POST("/read", h.GetUser)
+		crud.POST("/update", h.UpdateUser)
+		crud.POST("/delete", h.DeleteUser)
 
 	}
 
