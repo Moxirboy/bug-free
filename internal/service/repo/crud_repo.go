@@ -2,7 +2,7 @@ package repo
 
 import (
 	"database/sql"
-	"golang-project-template/internal/model"
+	"bug-free/internal/model"
 )
 
 type postgres struct {

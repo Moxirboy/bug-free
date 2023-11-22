@@ -20,6 +20,13 @@ var rootCmd = &cobra.Command{
 	},
 }
 
+
+// @title Your API Title
+// @version 1.0
+// @description Your API Description
+// @host localhost:8080
+// @BasePath /api/v1
+
 func Execute() {
 	//if err := rootCmd.Execute(); err != nil {
 	//	fmt.Fprintf(os.Stderr, "error while executing your CLI '%s'", err)

@@ -2,7 +2,7 @@ package repo
 
 import (
 	"fmt"
-	"golang-project-template/internal/model"
+	"bug-free/internal/model"
 )
 
 func (p *postgres) Create(user model.User) (int, error) {
