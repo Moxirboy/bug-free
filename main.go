@@ -1,1 +1,7 @@
-package bug_free
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("jad")
+}
