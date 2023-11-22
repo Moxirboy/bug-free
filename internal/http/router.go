@@ -1,12 +1,12 @@
 package http
 
 import (
+	config2 "bug-free/internal/config"
+	"bug-free/internal/http/handler"
+	"bug-free/internal/service/repo"
+	usecase "bug-free/internal/service/usecase"
+	postgres "bug-free/pkg/postgres"
 	"github.com/gin-gonic/gin"
-	config2 "golang-project-template/internal/config"
-	"golang-project-template/internal/http/handler"
-	"golang-project-template/internal/service/repo"
-	usecase "golang-project-template/internal/service/usecase"
-	postgres "golang-project-template/pkg/postgres"
 )
 
 func Router() *gin.Engine {

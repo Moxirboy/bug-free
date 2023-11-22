@@ -1,6 +1,6 @@
 package usecase
 
-import "golang-project-template/internal/model"
+import "bug-free/internal/model"
 
 func (c *Crud) Create(user model.User) (int, error) {
 	return c.repo.Create(user)

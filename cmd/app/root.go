@@ -1,10 +1,10 @@
 package app
 
 import (
+	configs "bug-free/internal/config"
+	http2 "bug-free/internal/http"
+	"bug-free/internal/server"
 	"github.com/spf13/cobra"
-	configs "golang-project-template/internal/config"
-	http2 "golang-project-template/internal/http"
-	"golang-project-template/internal/server"
 	"log"
 )
 

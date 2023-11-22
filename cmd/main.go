@@ -1,6 +1,6 @@
 package main
 
-import "golang-project-template/cmd/app"
+import "bug-free/cmd/app"
 
 func main() {
 	app.Execute()

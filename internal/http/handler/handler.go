@@ -1,9 +1,9 @@
 package handler
 
 import (
+	"bug-free/internal/model"
+	"bug-free/internal/response"
 	"github.com/gin-gonic/gin"
-	"golang-project-template/internal/model"
-	"golang-project-template/internal/response"
 	"net/http"
 )
 

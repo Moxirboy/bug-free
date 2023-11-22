@@ -1,10 +1,10 @@
 package postgres
 
 import (
+	config "bug-free/internal/config"
 	"database/sql"
 	"fmt"
 	_ "github.com/jackc/pgx/v4/stdlib"
-	config "golang-project-template/internal/config"
 )
 
 func NewPostgresConfig(cfg *config.Config) (*sql.DB, error) {

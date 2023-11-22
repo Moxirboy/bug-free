@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"golang-project-template/internal/model"
-	"golang-project-template/internal/service/repo"
+	"bug-free/internal/model"
+	"bug-free/internal/service/repo"
 )
 
 type Crud struct {
