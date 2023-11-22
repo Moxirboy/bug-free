@@ -5,15 +5,15 @@ import (
 	"bug-free/internal/service/repo"
 )
 
-type Crud struct {
+type User struct {
 	repo repo.Postgres_
 }
 
-func NewCrud(repo repo.Postgres_) *Crud {
-	return &Crud{repo: repo}
+func NewCrud(repo repo.Postgres_) *User {
+	return &User{repo: repo}
 }
 
-type crud_ interface {
+type UserUse interface {
 	Create(user model.User) (int, error)
 	Read() []string
 	Update() error

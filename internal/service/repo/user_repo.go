@@ -13,7 +13,7 @@ func NewPostgres(db *sql.DB) *postgres {
 	return &postgres{db: db}
 }
 
-type Postgres_ interface {
+type PostgresRepo interface {
 	Create(user model.User) (int, error)
 	Read() []string
 	Update() error
