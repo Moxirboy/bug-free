@@ -5,12 +5,12 @@ import "bug-free/internal/model"
 func (c *User) Create(user model.User) (int, error) {
 	return c.repo.Create(user)
 }
-func (c *User) Read() []string {
-	return c.repo.Read()
+func (c *User) Read(id model.UserGetBYId) (string,error) {
+	return c.repo.ReadById(id)
 }
-func (c *User) Update() error {
-	return c.repo.Update()
+func (c *User) Update(user model.User)(int, error ){
+	return c.repo.Update(user )
 }
-func (c *User) Delete() error {
-	return c.repo.Delete()
+func (c *User) Delete(user model.User) (int,error) {
+	return c.repo.Delete(user)
 }

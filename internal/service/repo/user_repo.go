@@ -15,7 +15,7 @@ func NewPostgres(db *sql.DB) *postgres {
 
 type PostgresRepo interface {
 	Create(user model.User) (int, error)
-	Read() []string
-	Update() error
-	Delete() error
+	ReadById(id model.UserGetBYId) (string,error)
+	Update(user model.User) (int,error)
+	Delete(user model.User) (int,error)
 }

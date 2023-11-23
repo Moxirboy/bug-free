@@ -15,7 +15,7 @@ func NewCrud(repo repo.PostgresRepo) *User {
 
 type UserUse interface {
 	Create(user model.User) (int, error)
-	Read() []string
-	Update() error
-	Delete() error
+	Read(id model.UserGetBYId) (string,error)
+	Update(user model.User) (int ,error)
+	Delete(user model.User) (int,error)
 }
