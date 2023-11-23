@@ -9,7 +9,7 @@ type User struct {
 	repo repo.PostgresRepo
 }
 
-func NewCrud(repo repo.PostgresRepo) *User {
+func NewUser(repo repo.PostgresRepo) *User {
 	return &User{repo: repo}
 }
 

@@ -16,7 +16,7 @@ func Router() *gin.Engine {
 		panic("no database connection")
 	}
 	newPostgres := repo.NewPostgres(db)
-	service := usecase.NewCrud(newPostgres)
+	service := usecase.NewUser(newPostgres)
 	handle := handler.NewHandler(service)
 	return handle.InitRouter()
 }
