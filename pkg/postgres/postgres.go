@@ -11,8 +11,7 @@ func NewPostgresConfig(cfg *config.Config) (*sql.DB, error) {
 	psqlString := fmt.Sprintf(`
 	host=%s port=%s user=%s password=%s dbname=%s sslmode=%s
 	`,
-	 cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Database, cfg.SslMode
-	)
+	 cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Database, cfg.SslMode)
 
 	instance, err := sql.Open("pgx", psqlString)
 	if err != nil {
